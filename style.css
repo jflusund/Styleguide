@@ -92,7 +92,6 @@ table {font-size: inherit; font: 100%;}
 a:hover, a:active {outline: none;}
 
 small {font-size: 0.8em; color: #888;}
-.search-help {display:none;}
 
 strong, th {font-weight: bold;}
 
@@ -140,15 +139,7 @@ button {
     display: inline-block;
     *display: inline; /* IE7 inline-block hack */
     *zoom: 1;
-    
-    color: #fff !important;
-    font-weight: bold;
-    background: #555; 
-    padding: 4px 8px;
-    text-transform: uppercase; 
 }
-input[type=search] {}
-.widget_search {float:right; margin-top: -21px;}
  
 /* scale images in IE7 more attractively */
 .ie7 img {-ms-interpolation-mode: bicubic;}
@@ -160,7 +151,6 @@ input[type=search] {}
 .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
 .clearfix:after { clear: both; }  
 .clearfix { zoom: 1; }  
-
 
 
 /* Ok, this is where the fun starts.
@@ -175,54 +165,6 @@ body {font: 17px 'Open Sans Condensed', Helmet, Freesans, sans-serif; background
 /* we like off-black for text */
 body, select, input, textarea {color: #555;}
 
-a {color: inherit; text-decoration: underline;}
-a:hover {text-decoration: none;}
-a:visited {color: inherit;}
-
-/* font styles */
-h1 {
-	font-size: 2.5em;
-	letter-spacing: -0.06em;
-	font-weight: normal;
-	text-shadow: 2px 2px 1px #fff;
-	}
-#header h1 a {display:none;}
-h2, .entry-title {
-	font-family: 'Droid Serif', Helmet, Freesans, sans-serif;
-	letter-spacing: -0.05em;
-	font-size: 2.2em;
-	font-weight: normal;
-	padding-top: 0px;
-	text-shadow: 2px 2px 1px #fff;
-	}
-.widget h2 {color:#bbb; font-size: 1.03em; text-transform: uppercase; padding-bottom: 10px; font-weight: bold; font-family: 'Open Sans Condensed', Helmet, Freesans, sans-serif;}
-
-h3 {
-	font-size: 1.7em;
-	font-weight: normal;
-	padding: 2px 0 10px 0;
-	line-height: 1em;
-	border-top: 2px solid #ccc;
-	margin-top: 1.3em;
-	text-shadow: 2px 2px 1px #fff;
-	}
-h4 {font-size: 1.15em; padding: 1.3em 0 8px 0;}
-.ingress {font-size: 1.2em; font-family: 'Droid Serif', Helmet, Freesans, sans-serif;}
-blockquote {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 50px;
-  padding-left: 15px;
-  border-left: 2px solid #ccc;
-} 
-blockquote p:first-letter {
-	float: left;
-	margin: .27em .12em .09em 0;
-	font-size: 3em;
-	font-weight: bold; }
-blockquote p:first-line {
-	font-weight: bold; }
-
 /* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection{background: #FE57A1; color: #fff; text-shadow: none;}
 ::selection {background: #FE57A1; color: #fff; text-shadow: none;} 
@@ -234,15 +176,58 @@ ins {background-color: #FE57A1; color: #000; text-decoration: none;}
 mark {background-color: #FE57A1; color: #000; font-style: italic; font-weight: bold;}
 
 
-
 /* And here begins the Wordpress fun.
 -------------------------------------------------------------------------------*/
+#page-wrap {width: 1200px; margin: 0px auto;} 
+.screen-reader-text {display: none;}
 
-#page-wrap {width: 1200px; margin: 0px auto;}
+a {color: inherit; text-decoration: underline;}
+a:hover {text-decoration: none;}
+a:visited {color: inherit;}
 
-.post {float:right; width: 839px; }
-.search-result {}
+#meta {}
+.meta {color: #777;}
+.postmetadata {}
+
+#footer {clear: both; padding-top: 32px;}
+
+.navgation {}
+.next-posts {}
+.prev-posts {}
+
+/* Main typography 
+-------------------------------------------------------------------------------*/
+h1 {
+	font-size: 2.5em;
+	letter-spacing: -0.06em;
+	font-weight: normal;
+	text-shadow: 2px 2px 1px #fff;
+	}
+h2, .entry-title {
+	font-family: 'Droid Serif', Helmet, Freesans, sans-serif;
+	letter-spacing: -0.05em;
+	font-size: 2.2em;
+	font-weight: normal;
+	padding-top: 0px;
+	text-shadow: 2px 2px 1px #fff;
+	}
+h3 {
+	font-size: 1.7em;
+	font-weight: normal;
+	padding: 2px 0 10px 0;
+	line-height: 1em;
+	border-top: 2px solid #ccc;
+	margin-top: 1.3em;
+	text-shadow: 2px 2px 1px #fff;
+	}
+h4 {font-size: 1.15em; padding: 1.3em 0 8px 0;} 
+
+
+
+/* posts and pages 
+-------------------------------------------------------------------------------*/
 .category-css {width: 1200px;}
+.post {float:right; width: 839px; }
 .post h2, .entry-title {color: #444;}
 .post p, .post li, .entry p {line-height: 1.6em; max-width: 500px;}
 .post li {padding-bottom: 10px;}
@@ -259,10 +244,28 @@ mark {background-color: #FE57A1; color: #000; font-style: italic; font-weight: b
 .entry img {background-color: #f2f2f2; padding: 10px; box-shadow: 1px 1px 1px #bbb; width: none; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px;}
 .entry td>img {background: none; box-shadow: none; padding: none;}
 
-#meta {}
-.meta {color: #777;}
-.postmetadata {}
+/* quote and ingress on posts and pages 
+-------------------------------------------------------------------------------*/
+.ingress {font-size: 1.2em; font-family: 'Droid Serif', Helmet, Freesans, sans-serif;}
 
+blockquote {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  padding-left: 15px;
+  border-left: 2px solid #ccc;
+} 
+blockquote p:first-letter {
+	float: left;
+	margin: .27em .12em .09em 0;
+	font-size: 3em;
+	font-weight: bold; }
+blockquote p:first-line {
+	font-weight: bold; }
+
+
+/* Sidebar - widgets 
+-------------------------------------------------------------------------------*/
 #sidebar {
 	width: 300px;
 	background: #fbfbfb;
@@ -278,11 +281,15 @@ mark {background-color: #FE57A1; color: #000; font-style: italic; font-weight: b
 	color: #444;
 	}
 #sidebar ul {}
-	
-#menu-item--46, #menu-item--43, #menu-item--23, #menu-item--26 {border-top: 2px solid #ddd; padding-top: 15px !important; margin-top: 10px;}
 #sidebar a:hover {background: #eee; text-shadow: 1px 1px 1px #fff; padding:5px 5px; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px;}
 #sidebar a {text-decoration: none;}
-.screen-reader-text {display: none;}
+.widget h2 {color:#bbb; font-size: 1.03em; text-transform: uppercase; padding-bottom: 10px; font-weight: bold; font-family: 'Open Sans Condensed', Helmet, Freesans, sans-serif;} /*sidebar menu-parent name*/
+#menu-item--46, #menu-item--43, #menu-item--23, #menu-item--26 {border-top: 2px solid #ddd; padding-top: 15px !important; margin-top: 10px;}
+
+
+/* Header - widgets 
+-------------------------------------------------------------------------------*/
+#header h1 a {display:none;}
 #header {margin-bottom:60px; padding-top:4px; /*background-color: #555; box-shadow: 0px 1px 1px #bbb;*/}
 #header .menu li {
 	font-size: 1.03em;
@@ -296,17 +303,31 @@ mark {background-color: #FE57A1; color: #000; font-style: italic; font-weight: b
 #header .menu li a {text-decoration: none;}
 #header .menu li a:hover {border-top: 5px solid #444;}
 #header .menu li:first-child {color: #444;}
-#footer {clear: both; padding-top: 32px;}
 
-.navgation {}
-.next-posts {}
-.prev-posts {}
+
+/* Search
+-------------------------------------------------------------------------------*/
 
 #searchform {}
 #s {}
 #searchsubmt {}
-.search-results #sidebar {display: none;}
-	
+.search-results #sidebar, .search-no-results #sidebar {display: none;} /*hide the sidebar on searchresult page*/ 
+.search-result {}
+input[type=search] {}
+.widget_search {float:right; margin-top: -21px;}
+#searchsubmit {   
+    color: #fff !important;
+    font-weight: bold;
+    background: #555; 
+    padding: 4px 8px;
+    text-transform: uppercase; 
+}
+.hide {display:none;} /*hide my manually typed searchkeywords in posts and pages*/ 
+body.search.search-results ARTICLE#post-617 {display:none;} /*hide posts I don´t want to appear in searc-results*/ 
+
+
+/* Comments
+-------------------------------------------------------------------------------*/	
 ol.commentlist {list-style: none;}
 ol.commentlist li {}
 ol.commentlist li.alt {}
@@ -353,14 +374,14 @@ ol.commentlist li.thread-odd {}
 -------------------------------------------------------------------------------*/
 @media print {
 
-
+h1, h2, h3, h4, #widget {text-shadow: none;}
+#sidebar, .entry img, .entry td, .entry th {box-shadow: none;}
+.entry img, .entry td, .entry th {border: 1px dotted #ccc;}
 
 }
 
-
 /* Media queries!
 -------------------------------------------------------------------------------*/
-
 /* Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
 
 
@@ -375,33 +396,28 @@ ol.commentlist li.thread-odd {}
 @media screen and (max-width: 769px) {
 
 body {font-family: Helmet, Freesans, sans-serif; }
+#page-wrap {width:auto; padding:0 10px;}
+
 h1 {font-size: 2em;}
 h2 {font-size: 1.6em; font-weight: bold;}
 h3 {font-size: 1.4em;}
 h4 {font-size: 1.2em;}
 p {font-size: 1em;}
-#page-wrap {width:auto; padding:0 10px;}
-.post, .category-css, .search-result {width:100%;}
-#sidebar {border-top: 5px solid #555; width:100%; margin-left:-10px; margin-top:40px; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; padding-top: 40px; padding-bottom: 40px;}
-#sidebar li {line-height: 1.5em;}
-footer {display: none;}
+
 #header {border-bottom: 5px solid #555; padding-bottom: 80px; background-color: #fff;}
 #header .menu {padding: 0px 0;}
 #header .menu li a:hover {border-top: none;}
-#header .menu li {
-	font-size: 1.03em;
-	line-height: 1.5em;
-	padding: .5em 0 .5em 0;
-	float: none;
-	display: list-item;
-	border-bottom: 2px solid #ddd;
-	}
-#searchsubmit { 
-	width: 40%;
-	font-size: 1em;
-}
+#header .menu li {font-size: 1.03em; line-height: 1.5em; padding: .5em 0 .5em 0; float: none; display: list-item; border-bottom: 2px solid #ddd;}
+
+#searchsubmit {width: 40%; font-size: 1em;}
+.widget_search {float:left; margin-top: none; padding-bottom: 20px; margin-bottom:40px; margin-top: 20px; width:100%;}
 input[type=search] {width: 50%;}
-.widget_search {float:left; margin-top: none; padding-bottom: 20px; margin-bottom:40px; margin-top: 20px; width:100%; }
+
+#sidebar {border-top: 5px solid #555; width:100%; margin-left:-10px; margin-top:40px; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; padding-top: 40px; padding-bottom: 40px;}
+#sidebar li {line-height: 1.5em;}
+
+.post, .category-css, .search-result {width:100%;}
+footer {display: none;}
 		
 }
 
